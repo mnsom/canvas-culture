@@ -1,6 +1,6 @@
 <div class="cards">
-  <div class="card-trip">
     <% @paintings.each do |painting| %>
+  <div class="card-trip">
       <%= image_tag painting.poster_url, alt: painting.title, width: 200 %>
       <div class="card-trip-infos">
         <div>
