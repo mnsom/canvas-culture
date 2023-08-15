@@ -19,5 +19,4 @@ class RequestsController < ApplicationController
   def request_params
     params.require(:request).permit(:start_date, :end_date)
   end
-
 end
