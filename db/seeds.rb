@@ -26,6 +26,7 @@ Request.create!(status: "accepted", start_date: Date.new(2023, 8, 29), end_date:
 
 # Mona Lisa
 # the japanase wave next to fujis
+<<<<<<< Updated upstream
 # <<<<<<< HEAD
 # <<<<<<< Updated upstream
 
@@ -36,6 +37,10 @@ Request.create!(status: "accepted", start_date: Date.new(2023, 8, 29), end_date:
 # # https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg
 # >>>>>>> 3363a515e5fbc9e32951251a88440cb4ec223b0b
 # # Monet Paiting
+=======
+# https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg
+# Monet Paiting
+>>>>>>> Stashed changes
 
 # Frida Khalo
 
