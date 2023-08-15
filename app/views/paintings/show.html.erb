@@ -1,4 +1,4 @@
-<%= simple_form_for([@request, @painting]) do |f| %>
+<%= simple_form_for([@painting, @request]) do |f| %>
   <%=  f.input :start_date %>
   <%=  f.input :end_date %>
   <%= f.submit "Create request", class: "btn btn-primary" %>
