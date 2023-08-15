@@ -1,5 +1,14 @@
-<%= simple_form_for([@painting, @request]) do |f| %>
-  <%=  f.input :start_date %>
-  <%=  f.input :end_date %>
-  <%= f.submit "Create request", class: "btn btn-primary" %>
-<% end %>
+<div class="container py-5 px-0 d-flex">
+    <%= render 'shared/requestform' %>
+    <div class="px-5 center-block" style="width:400px">
+      <%= simple_form_for([@painting, @request]) do |f| %>
+      <!-- <%=  f.input :start_date, class: "form-control"%> -->
+        <!--<%=  f.input :end_date, class: "form-control"%> -->
+        <%=  f.label :start_date, class: 'control-label'%>
+        <%=  f.date_field :start_date, class:'form-control bg-white'%>
+        <%=  f.label :end_date, class: 'control-label'%>
+        <%=  f.date_field :end_date, class:'form-control  bg-white mb-3'%>
+        <%= f.submit "Create request", class: "btn btn-primary" %>
+      <% end %>
+  </div>
+</div>

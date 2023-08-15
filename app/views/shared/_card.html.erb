@@ -2,7 +2,7 @@
   <% @paintings.each do |painting| %>
     <%= link_to painting_path(painting) do %>
       <div class="card-trip">
-        <img src="<%= painting.poster_url %>" >
+        <img src="<%= painting.poster_url ? painting.poster_url : cl_image_path(painting.photo.key)%>" >
         <div class="card-trip-infos">
           <div>
             <h2><%= painting.title %></h2>
