@@ -5,6 +5,7 @@ class PaintingsController < ApplicationController
 
   def show
     @painting = Painting.find(params[:id])
+    @request = Request.new
   end
 
   def new
