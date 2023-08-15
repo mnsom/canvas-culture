@@ -1,7 +1,13 @@
 <div class="cards">
+<<<<<<< Updated upstream
   <div class="card-trip">
     <% @paintings.each do |painting| %>
       <%= painting.poster_url, alt: painting.title, width: 200 %>
+=======
+  <% @paintings.each do |painting| %>
+    <div class="card-trip">
+      <img src="<%= painting.poster_url ? painting.poster_url : cl_image_path(painting.photo.key)%>" >
+>>>>>>> Stashed changes
       <div class="card-trip-infos">
         <div>
           <h2><%= painting.title %></h2>
