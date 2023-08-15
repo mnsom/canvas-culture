@@ -1,0 +1,10 @@
+  <% request = Request.first %>
+<div class="card-product">
+    <img src="<%=request.painting.poster_url%>" />
+    <div class="card-product-infos">
+      <h2>Your request</h2>
+      <h2><%=request.painting.title %></h2>
+      <p> ¥<%=request.painting.price %></p>
+      <p>Owner: Alan Von Rich</p>
+    </div>
+  </div>
