@@ -1,13 +1,14 @@
 <div class="cards">
   <div class="card-trip">
-    <%= image_tag "monalisa.jpg", alt: "Monalisa", width: 200 %>
-    <div class="card-trip-infos">
-      <div>
-        <h2>Title here</h2>
-        <p>Short description here!</p>
+    <% @paintings.each do |painting| %>
+      <%= painting.poster_url, alt: painting.title, width: 200 %>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= painting.title %></h2>
+        </div>
+        <p class="card-trip-pricing"><%= painting.price %></p>
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
       </div>
-      <p class="card-trip-pricing">Price here</p>
-      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-    </div>
+    <% end %>
   </div>
 </div>
