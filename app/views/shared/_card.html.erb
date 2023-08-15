@@ -1,14 +1,14 @@
 <div class="cards">
-  <div class="card-trip">
-    <% @paintings.each do |painting| %>
-      <%= painting.poster_url, alt: painting.title, width: 200 %>
+  <% @paintings.each do |painting| %>
+    <div class="card-trip">
+      <img src="<%= painting.poster_url %>" >
       <div class="card-trip-infos">
         <div>
           <h2><%= painting.title %></h2>
         </div>
         <p class="card-trip-pricing"><%= painting.price %></p>
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        <img src="https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1688041076/wvtatzin7y9gpa4tdjsn.jpg" class="card-trip-user avatar-bordered" />
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
