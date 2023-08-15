@@ -1,0 +1,8 @@
+<% @requests.each do |request| %>
+  <div class="card-category">
+    <%= request.start_date %>
+    <%= request.end_date %>
+    <%= request.status %>
+    <%= request.painting.title %>
+  </div>
+<% end %>
