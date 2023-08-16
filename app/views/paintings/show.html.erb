@@ -1,14 +1,32 @@
-<div class="container py-5 px-0 d-flex">
-    <%= render 'shared/requestform' %>
-    <div class="px-5 center-block" style="width:400px">
+<div class="container py-5 mb-4"> <!--painting pictures -->
+  <%= render 'shared/requestform' %>
+</div>
+<div class="container d-flex"><!--description & form -->
+  <div class="row">
+    <div class="col-8 mr-4"><!--description -->
+      <div class="owner-info border-bottom border-secondary mb-3 d-flex">
+        <div class="name">Owner: Ramon Tanuki</div>
+        <p class="mb-0"><i class="fa-solid fa-user h3 mb-0 ml-2"></i></p>
+      </div>
+      <div class="description text-center">
+        <p>Lorem ipsum dolor sit amet. Ea amet eaque qui mollitia expedita eos rerum beatae aut perferendis harum et obcaecati consequatur aut minima suscipit. A nemo praesentium ad aliquid quia in sunt consequatur aut voluptatibus error cum ipsum galisum. Eum ducimus maxime sit omnis accusamus et quod eligendi.
+          Aut illo similique ad vero debitis ut animi eius aut facilis eveniet eos possimus adipisci sed nihil autem sed sint nostrum. Est placeat saepe aut cupiditate nostrum sed facere nesciunt qui molestiae atque. Et quia esse et assumenda rerum quo ipsam facere.
+        </p>
+      </div>
+    </div>
+    <div class="col-4 bg-white p-4 rounded"><!--form -->
+      <p>200,000yen/ day</p>
+      <p>🌟4.5/ 10 reviews</p>
       <%= simple_form_for([@painting, @request]) do |f| %>
-      <!-- <%=  f.input :start_date, class: "form-control"%> -->
-        <!--<%=  f.input :end_date, class: "form-control"%> -->
         <%=  f.label :start_date, class: 'control-label'%>
         <%=  f.date_field :start_date, class:'form-control bg-white'%>
         <%=  f.label :end_date, class: 'control-label'%>
         <%=  f.date_field :end_date, class:'form-control  bg-white mb-3'%>
-        <%= f.submit "Create request", class: "btn btn-primary" %>
+          <div class="d-grid mx-auto">
+        <%= f.submit "Create request", class: "btn btn-primary mb-3" %>
+          </div>
       <% end %>
+      <%= link_to "Back to home", root_path%>
+    </div>
   </div>
 </div>
