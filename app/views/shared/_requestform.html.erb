@@ -1,10 +1,25 @@
   <% request = Request.first %>
 <div class="card-product">
-    <img src="<%=request.painting.poster_url%>" />
-    <div class="card-product-infos">
-      <h2>Your request</h2>
-      <h2><%=request.painting.title %></h2>
-      <p> ¥<%=request.painting.price %></p>
-      <p>Owner: Alan Von Rich</p>
+  <%# <img src="<%=request.painting.poster_url%>
+  <div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg" />
+  </div>
+  <div>
+    <div class="grid-card">
+      <div class="mb-2">
+        <img src="https://deco-roo.com/wp-content/uploads/2022/03/mona-lisa-miyabina01.jpg">
+      </div>
+      <div class="mb-2">
+        <img src="https://cdn.goppion.com/uploads/images/News/_twoThirds/louvre-vetrina-provvisoria-gioconda-jemolo-004.jpg">
+      </div>
+    </div>
+    <div class="grid-card">
+      <div>
+        <img src="https://cdn.goppion.com/uploads/images/News/_twoThirds/louvre-vetrina-provvisoria-gioconda-jemolo-004.jpg">
+      </div>
+      <div>
+        <img src="https://deco-roo.com/wp-content/uploads/2022/03/mona-lisa-miyabina01.jpg">
+      </div>
     </div>
   </div>
+</div>
