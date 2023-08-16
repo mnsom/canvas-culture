@@ -1,12 +1,10 @@
-.card-product {
+.gallery {
   overflow: hidden;
   border-radius: 5px;
-  height: 500px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  // width:400px;
   padding:10px;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -17,30 +15,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
-  // margin-left: 16px;
-  // padding-top: 10px;
 }
 
-.card-product img {
+.gallery img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-// .card-product h2{
-//   font-size: 18px;
-//   font-weight: bold;
-//   margin: 0;
-// }
-
-// .card-product p {
-//   font-size: 12px;
-//   line-height: 1.4;
-//   opacity: .7;
-//   margin-bottom: 0;
-//   margin-top: 8px;
-// }
-
-.card-product .card-product-infos {
+.gallery .card-product-infos {
   padding: 16px;
 }
