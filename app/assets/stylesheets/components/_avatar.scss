@@ -2,6 +2,12 @@
   width: 40px;
   border-radius: 50%;
 }
+
+img.avatar:hover {
+  transform: translate(0px, -2px);
+  transition: .3s;
+}
+
 .avatar-large {
   width: 56px;
   border-radius: 50%;
