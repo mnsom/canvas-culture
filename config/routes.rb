@@ -9,4 +9,9 @@ Rails.application.routes.draw do
     resources :requests, only: %i[create]
   end
   resources :requests, only: :index
+
+  namespace :owner do
+    resources :requests, only: :index
+    # equivalent to => get '/<namespace>/bookings', to: '<namespace>/bookings#index'
+  end
 end
