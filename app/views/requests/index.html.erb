@@ -1,4 +1,6 @@
 <div class="container mt-3">
   <h1>My requests 🖼️</h1>
-  <%= render 'shared/requestcard' %>
+  <% @requests.each do |request| %>
+  <%= render 'shared/user-requestcard', request: request %>
+  <% end %>
 </div>
