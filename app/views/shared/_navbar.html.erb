@@ -13,7 +13,7 @@
             <%= link_to "Home", "/", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <p class="mb-0"><i class="fa-solid fa-user h3 p-2 mb-0"></i></p>
+            <%= image_tag "icon.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My requests", "/requests", class: "dropdown-item" %>
               <%= link_to "Add painting", "/paintings/new", class: "dropdown-item" %>
