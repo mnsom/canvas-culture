@@ -12,8 +12,8 @@
         </div>
       </div>
       <div class="p-4 bg-white"><!--form -->
-        <p>100,000yen/ day</p>
-        <p>🌟4.5   10reviews</p>
+        <p><%= number_to_currency(@painting.price, {unit: "¥", precision: 0 }) %>/ day</p>
+        <p>🌟4.5  <i class="fa-regular fa-comment"></i> 10</p>
         <%= simple_form_for([@painting, @request]) do |f| %>
           <%=  f.label :start_date, class: 'control-label'%>
           <%=  f.date_field :start_date, class:'form-control bg-white'%>
