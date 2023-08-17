@@ -13,9 +13,8 @@
             placeholder: "Painting Title"
         %>
           <%= button_tag name: "", class: "btn btn-primary" do %>
-          <i class="fas fa-search"></i>
+            <i class="fas fa-search"></i>
           <% end %>
-
         <% end %>
       </div>
       <%# <button type="button" class="btn btn-primary">
@@ -37,6 +36,7 @@
               <%= link_to "My requests", "/requests", class: "dropdown-item" %>
               <%= link_to "Inbox", "/owner/requests", class: "dropdown-item" %>
               <%= link_to "Add painting", "/paintings/new", class: "dropdown-item" %>
+              <%= link_to "My items", "/owner/paintings", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
