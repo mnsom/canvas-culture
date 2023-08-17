@@ -16,7 +16,7 @@ class PaintingsController < ApplicationController
     @painting = Painting.new(painting_params)
     @painting.user = current_user
       if @painting.save
-        redirect_to painting_path(@painting)
+        redirect_to paintings_path(@painting)
       else
         # give the form back again -> new.html.erb
         render :new, status: :unprocessable_entity
@@ -26,6 +26,6 @@ class PaintingsController < ApplicationController
   private
 
   def painting_params
-    params.require(:painting).permit(:title, :price, :photo)
+    params.require(:painting).permit(:title, :price, photos: [])
   end
 end
