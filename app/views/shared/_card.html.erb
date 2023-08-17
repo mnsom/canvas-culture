@@ -10,7 +10,11 @@
             <h2><%= painting.title %></h2>
           </div>
           <p class="card-trip-pricing"><%= number_to_currency(painting.price, {unit: "¥", precision: 0 }) %></p>
-          <img src="https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1688041076/wvtatzin7y9gpa4tdjsn.jpg" class="card-trip-user avatar-bordered" />
+          <% if painting.user.photo.attached? %>
+            <img src="<%= cl_image_path(painting.user.photo.key)%>" class="card-trip-user avatar-bordered" >
+          <% else %>
+            <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" class="card-trip-user avatar-bordered" />
+          <% end %>
         </div>
       </div>
     <% end %>
