@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :requests # requests as a client
   has_many :paintings
   has_many :requests_as_owner, through: :paintings, source: :requests
+  has_one_attached :photo, dependent: :destroy
 end

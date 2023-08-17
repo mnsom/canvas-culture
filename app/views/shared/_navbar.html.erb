@@ -31,7 +31,12 @@
             <%= link_to "Home", "/", class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
-            <%= image_tag "icon.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% if current_user.photo.attached? %>
+              <img src="<%= cl_image_path(current_user.photo.key)%>" class="card-trip-user avatar-bordered avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            <% else %>
+              <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" class="card-trip-user avatar-bordered avatar"  id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+            <% end %>
+            <%# <%= image_tag "icon.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "My requests", "/requests", class: "dropdown-item" %>
               <%= link_to "Inbox", "/owner/requests", class: "dropdown-item" %>
