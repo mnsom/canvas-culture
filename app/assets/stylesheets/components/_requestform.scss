@@ -27,6 +27,7 @@
   img {
     width: 100%;
     object-fit: cover;
+    object-position: top; //モナリザの写真の位置に合わせた
   }
 
   img:not(.photo-1) {
