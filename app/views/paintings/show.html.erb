@@ -15,21 +15,24 @@
       <p>100,000yen/ day</p>
       <p>🌟4.5   10reviews</p>
 
-      <%= simple_form_for([@painting, @request]) do |f| %>
-        <%=  f.label :start_date, class: 'control-label'%>
-        <%=  f.date_field :start_date, class:'form-control bg-white'%>
-        <%=  f.label :end_date, class: 'control-label'%>
-        <%=  f.date_field :end_date, class:'form-control  bg-white mb-3'%>
+      <div class="total" data-controller="total-price"> <!--totalprice-->
+        <%= simple_form_for([@painting, @request]) do |f| %>
+          <%=  f.input :start_date, html5: true, class:'form-control bg-white', input_html: { data: { total_price_target: 'start_date', action: 'change->total-price#update' } } %>
+          <%=  f.input :end_date, html5: true, class:'form-control  bg-white mb-3', input_html: { data: { total_price_target: 'end_date', action: 'change->total-price#update' } } %>
+        <p>
+          Total:
+          <span class='fw-light' data-total-price-target='price' data-price="<%= @painting.price %>">¥<%= @painting.price %> / day</span>
+        </p>
 
-
+          <div class="d-grid mx-auto">
+            <%= f.submit "Create request", class: "btn btn-primary mb-3" %>
+          </div>
+        <% end %>
         <div class="d-grid mx-auto">
-          <%= f.submit "Create request", class: "btn btn-primary mb-3" %>
+          <%= link_to "Back to home", root_path, class: "btn btn-outline-primary"%>
         </div>
-      <% end %>
-      <div class="d-grid mx-auto">
-        <%= link_to "Back to home", root_path, class: "btn btn-outline-primary"%>
-      </div>
     </div>
   </div>
   </div>
+</div>
 </div>
