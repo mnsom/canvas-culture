@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :paintings, only: %i[index show create new] do
     resources :requests, only: %i[create]
   end
-  resources :requests, only: :index
+  resources :requests, only: %i[index update]
 
   namespace :owner do
     resources :requests, only: :index
