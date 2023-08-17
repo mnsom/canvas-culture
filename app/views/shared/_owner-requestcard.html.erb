@@ -1,11 +1,10 @@
 <div class="card-product mb-4">
   <img src="<%=request.painting.poster_url%>" />
   <div class="card-product-infos">
-    <h2>Your request</h2>
     <h2><strong><%=request.painting.title %></strong></h2>
-    <p> ¥<%=request.painting.price %></p>
-    <p> Date of submit: <%=request.created_at.to_date %></p>
-    <p> Rental date: from: <%=request.start_date %> to: <%=request.end_date %></p>
+    <p> <strong>Date of request:</strong> <%=request.created_at.to_date %></p>
+    <p> <strong>Rental date:</strong> <%=request.start_date %> <strong>-</strong> <%=request.end_date %></p>
+    <p> <strong>Total price:</strong> <%= number_to_currency(((request.end_date-request.start_date).to_i * request.painting.price), {unit: "¥", precision: 0 })  %> </p>
     <div class="d-flex status">
       <% if request.pending? %>
         <%= simple_form_for request do |f| %>
