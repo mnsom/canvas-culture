@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <h1>My items 🧑‍🎨</h1>
+  <div class="cards">
+    <% @paintings.each do |painting| %>
+      <%= link_to painting_path(painting) do %>
+        <div class="card-trip">
+          <% if painting.photos.attached? || painting.poster_url %>
+            <img src="<%= painting.poster_url ? painting.poster_url : cl_image_path(painting.photos.first.key)%>" >
+          <% end %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= painting.title %></h2>
+            </div>
+            <p class="card-trip-pricing">¥<%= painting.price %></p>
+            <img src="https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1688041076/wvtatzin7y9gpa4tdjsn.jpg" class="card-trip-user avatar-bordered" />
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
