@@ -3,7 +3,25 @@
     <%= link_to "/", class: "navbar-brand" do %>
       <%= image_tag "CultureCanvas_2.png" %>
     <% end %>
-    <%= image_tag "CanvasCultureColor-1.png", class: "navbar-name" %>
+    <%# <%= image_tag "CanvasCultureColor-1.png", class: "navbar-name" %>
+    <div class="input-group justify-content-center">
+      <div class="form-outline">
+        <%= form_with url: paintings_path, method: :get, class: "d-flex" do %>
+          <%= text_field_tag :q,
+            params[:q],
+            class: "form-control",
+            placeholder: "Painting Title"
+        %>
+          <%= button_tag name: "", class: "btn btn-primary" do %>
+          <i class="fas fa-search"></i>
+          <% end %>
+
+        <% end %>
+      </div>
+      <%# <button type="button" class="btn btn-primary">
+        <i class="fas fa-search"></i>
+      </button> %>
+    </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

@@ -1,6 +1,11 @@
 class PaintingsController < ApplicationController
   def index
-    @paintings = Painting.all
+    @paintings =
+      if params[:q].present?
+        Painting.global_search(params[:q])
+      else
+        Painting.all
+      end
   end
 
   def show
