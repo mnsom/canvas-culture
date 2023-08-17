@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   namespace :owner do
     resources :requests, only: :index
-    resources :paintings, only: %i[index show edit update destroy]
+    resources :paintings, only: %i[index show]
     # equivalent to => get '/<namespace>/bookings', to: '<namespace>/bookings#index'
   end
 end
