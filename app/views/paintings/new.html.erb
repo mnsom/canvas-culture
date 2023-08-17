@@ -1,6 +1,13 @@
-<%= simple_form_for(@painting) do |f| %>
-    <%= f.input :title %>
-    <%= f.input :price %>
-    <%= f.input :photo, as: :file %>
-    <%= f.submit "Submit", class: "btn btn-primary" %>
-<% end %>
+<div class="row justify-content-center">
+<h3 class="my-4 text-center">Add your painting!</h3>
+<div class="form bg-white col-4 py-5 px-5">
+  <%= simple_form_for(@painting) do |f| %>
+    <%= f.input :title, input_html:{class:'form-control bg-white'}%>
+    <%= f.input :price, input_html:{class:'form-control bg-white'}%>
+    <%= f.input :photos, as: :file, input_html:{ class:'form-control bg-white mb-4',multiple: true }, class:'bg-white'%>
+    <div class="d-grid">
+      <%= f.submit "Submit", class: "btn btn-primary text-white" %>
+    </div>
+  <% end %>
+  </div>
+</div>
