@@ -1,5 +1,6 @@
-<div class="container px-0 py-5 mb-4 d-flex"> <!--painting pictures -->
+<div class="container px-0 py-4 mb-4 d-flex"> <!--painting pictures -->
   <div class="row">
+      <h2 class="mb-3"><%= @painting.title %></h2>
   <%= render 'shared/requestform' %>
 <div class="container col-4"><!--description & form -->
     <div class="ps-0 pe-4 mb-4"><!--description -->
@@ -25,7 +26,7 @@
         </p>
 
           <div class="d-grid mx-auto">
-            <%= f.submit "Create request", class: "btn btn-primary mb-3" %>
+            <%= f.submit "Create request", class: "btn btn-primary mb-3 text-white" %>
           </div>
         <% end %>
         <div class="d-grid mx-auto">
