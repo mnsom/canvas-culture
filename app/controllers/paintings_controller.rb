@@ -1,7 +1,12 @@
 class PaintingsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @paintings = Painting.all
+    @paintings =
+      if params[:q].present?
+        Painting.global_search(params[:q])
+      else
+        Painting.all
+      end
   end
 
   def show
