@@ -12,6 +12,8 @@
           <p class="card-trip-pricing"><%= number_to_currency(painting.price, {unit: "¥", precision: 0 }) %></p>
           <% if painting.user.photo.attached? %>
             <img src="<%= cl_image_path(painting.user.photo.key)%>" class="card-trip-user avatar-bordered" >
+          <% elsif painting.user.avatar %>
+            <img src=<%= painting.user.avatar %> class="card-trip-user avatar-bordered" />
           <% else %>
             <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" class="card-trip-user avatar-bordered" />
           <% end %>

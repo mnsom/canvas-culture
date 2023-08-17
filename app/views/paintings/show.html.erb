@@ -1,39 +1,37 @@
 <div class="container px-0 py-4 mb-4 d-flex"> <!--painting pictures -->
   <div class="row">
-      <h2 class="mb-3"><%= @painting.title %></h2>
-  <%= render 'shared/requestform' %>
-<div class="container col-4"><!--description & form -->
-    <div class="ps-0 pe-4 mb-4"><!--description -->
-      <div class="owner-info justify-content-end border-bottom border-secondary mb-3 d-flex align-item-center gap-3">
-        <div class="name mr-3">Owner: Ramon Tanuki</div>
-        <p class="mb-0"><i class="fa-solid fa-user h3"></i></p>
-      </div>
-      <div class="description text-center">
-        <p><%= @painting.description %></p>
-      </div>
-    </div>
-    <div class="p-4 bg-white"><!--form -->
-      <p>100,000yen/ day</p>
-      <p>🌟4.5   10reviews</p>
-
-      <div class="total" data-controller="total-price"> <!--totalprice-->
-        <%= simple_form_for([@painting, @request]) do |f| %>
-          <%=  f.input :start_date, html5: true, class:'form-control bg-white', input_html: { data: { total_price_target: 'start_date', action: 'change->total-price#update' } } %>
-          <%=  f.input :end_date, html5: true, class:'form-control  bg-white mb-3', input_html: { data: { total_price_target: 'end_date', action: 'change->total-price#update' } } %>
-        <p>
-          Total:
-          <span class='fw-light' data-total-price-target='price' data-price="<%= @painting.price %>">¥<%= @painting.price %> / day</span>
-        </p>
-
-          <div class="d-grid mx-auto">
-            <%= f.submit "Create request", class: "btn btn-primary mb-3 text-white" %>
-          </div>
-        <% end %>
-        <div class="d-grid mx-auto">
-          <%= link_to "Back to home", root_path, class: "btn btn-outline-primary"%>
+    <h2 class="mb-3"><%= @painting.title %></h2>
+    <%= render 'shared/requestform' %>
+    <div class="container col-4"><!--description & form -->
+      <div class="ps-0 pe-4 mb-4"><!--description -->
+        <div class="owner-info justify-content-end border-bottom border-secondary mb-3 d-flex align-item-center gap-3">
+          <div class="name mr-3">Owner: Ramon Tanuki</div>
+          <p class="mb-0"><i class="fa-solid fa-user h3"></i></p>
         </div>
+        <div class="description text-center">
+          <p><%= @painting.description %></p>
+        </div>
+      </div>
+      <div class="p-4 bg-white"><!--form -->
+        <p>100,000yen/ day</p>
+        <p>🌟4.5   10reviews</p>
+        <div class="total" data-controller="total-price"> <!--totalprice-->
+          <%= simple_form_for([@painting, @request]) do |f| %>
+            <%=  f.input :start_date, html5: true, class:'form-control bg-white', input_html: { data: { total_price_target: 'start_date', action: 'change->total-price#update' } } %>
+            <%=  f.input :end_date, html5: true, class:'form-control  bg-white mb-3', input_html: { data: { total_price_target: 'end_date', action: 'change->total-price#update' } } %>
+            <p>
+              Total:
+              <span class='fw-light' data-total-price-target='price' data-price="<%= @painting.price %>">¥<%= @painting.price %> / day</span>
+            </p>
+            <div class="d-grid mx-auto">
+              <%= f.submit "Create request", class: "btn btn-primary mb-3 text-white" %>
+            </div>
+          <% end %>
+          <div class="d-grid mx-auto">
+            <%= link_to "Back to home", root_path, class: "btn btn-outline-primary"%>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
-</div>
 </div>
