@@ -4,9 +4,9 @@
     <h2>Your request</h2>
     <h2><strong><%=request.painting.title %></strong></h2>
     <p> ¥<%=request.painting.price %></p>
-    <p> Date of submit: <%=request.start_date %></p>
+    <p> Date of submit: <%=request.created_at.to_date %></p>
     <p> Rental date: from: <%=request.start_date %> to: <%=request.end_date %></p>
-    <div class="alert alert-dark" role="alert">Pending</div>
+    <div class="alert alert-dark" role="alert"><%= request.status %></div>
     <p>Owner: Alan Von Rich</p>
   </div>
 </div>
