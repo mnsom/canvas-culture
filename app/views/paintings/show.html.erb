@@ -13,8 +13,8 @@
       </div>
     </div>
     <div class="p-4 bg-white"><!--form -->
-      <p>100,000yen/ day</p>
-      <p>🌟4.5   10reviews</p>
+      <p><%= number_to_currency(@painting.price, {unit: "¥", precision: 0 }) %>/ day</p>
+      <p>🌟4.5 <i class="fa-regular fa-comment"></i> 10</p>
 
       <div class="total" data-controller="total-price"> <!--totalprice-->
         <%= simple_form_for([@painting, @request]) do |f| %>
@@ -22,7 +22,7 @@
           <%=  f.input :end_date, html5: true, class:'form-control  bg-white mb-3', input_html: { data: { total_price_target: 'end_date', action: 'change->total-price#update' } } %>
         <p>
           Total:
-          <span class='fw-light' data-total-price-target='price' data-price="<%= @painting.price %>">¥<%= @painting.price %> / day</span>
+          <span class='fw-light' data-total-price-target='price' data-price="<%= @painting.price %>"><%= number_to_currency(@painting.price, {unit: "¥", precision: 0 }) %> / day</span>
         </p>
 
           <div class="d-grid mx-auto">
