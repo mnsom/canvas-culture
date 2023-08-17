@@ -10,8 +10,8 @@ Request.destroy_all
 Painting.destroy_all
 User.destroy_all
 
-alan = User.create!(email: "alan@me.com", password: "secret")
-lisa = User.create!(email: "lisa@me.com", password: "secret")
+alan = User.create!(email: "alan@me.com", password: "secret", name: "Ramon Tanuki", avatar: "https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1688041076/wvtatzin7y9gpa4tdjsn.jpg")
+lisa = User.create!(email: "lisa@me.com", password: "secret", name: "Carlos Kitsune", avatar: "https://avatars.githubusercontent.com/u/136877239?v=4")
 
 Painting.create!(title: "Mona Lisa (Da Vinci)", price: 100_000, poster_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg", user: alan,
                   description: "The Mona Lisa bears a strong resemblance to many Renaissance depictions of the Virgin Mary, who was at that time seen as an ideal for womanhood.")
