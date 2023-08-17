@@ -1,0 +1,12 @@
+<div class="card-product mb-4">
+  <img src="<%=request.painting.poster_url%>" />
+  <div class="card-product-infos">
+    <h2>Your request</h2>
+    <h2><strong><%=request.painting.title %></strong></h2>
+    <p> ¥<%=request.painting.price %></p>
+    <p> Date of submit: <%=request.start_date %></p>
+    <p> Rental date: from: <%=request.start_date %> to: <%=request.end_date %></p>
+    <div class="alert alert-dark" role="alert">Pending</div>
+    <p><strong>Requested by <%= request.user.name %></strong></p>
+  </div>
+</div>
