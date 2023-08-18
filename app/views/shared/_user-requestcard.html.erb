@@ -5,7 +5,14 @@
     <p> <strong>Date of submit:</strong> <%=request.created_at.to_date %></p>
     <p> <strong>Rental date:</strong> <%=request.start_date %> <strong>-</strong> <%=request.end_date %></p>
     <p> <strong>Total price:</strong> <%= number_to_currency(((request.end_date-request.start_date).to_i * request.painting.price), {unit: "¥", precision: 0 })  %> </p>
-    <div class="alert alert-dark" role="alert"><%= request.status %></div>
-    <p> <strong>Owner:</strong> Alan Von Rich</p>
-  </div>
+    <% case request.status %>
+    <% when 'accepted' %>
+      <div class="alert alert-success col-1 text-center" role="alert">Accepted!</div>
+      <% when 'rejected' %>
+      <div class="alert alert-danger col-1 text-center" role="alert">Rejected</div>
+      <% when 'pending'%>
+      <div class="alert alert-dark col-1 text-center" role="alert">Waiting</div>
+    <% end %>
+  <p> <strong>Owner:</strong> <%= request.painting.user.name %></p>
+</div>
 </div>
