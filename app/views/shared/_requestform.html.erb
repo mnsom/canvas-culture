@@ -1,4 +1,4 @@
-<div class="gallery col-6">
+<div class="gallery col-6 ms-4">
   <% if @painting.photos.attached? %>
     <% @painting.photos.each_with_index do |photo, index| %>
       <%= cl_image_tag photo.key, class: "photo-#{index+1}", width: 1000, crop: :fill %>
