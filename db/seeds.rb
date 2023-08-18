@@ -23,7 +23,7 @@ Painting.create!(title: "Woman with a Parasol (Monet)", price: 200_000, poster_u
                   description: "Monet's light, spontaneous brushwork creates splashes of colour. Mrs Monet's veil is blown by the wind, as is her billowing white dress; the waving grass of the meadow is echoed by the green underside of her parasol. She is seen as if from below, with a strong upward perspective, against fluffy white clouds in an azure sky. A boy, Monet's seven-year-old son Jean, is placed further away, concealed behind a rise in the ground and visible only from the waist up, creating a sense of depth. Monet depicted the brevity of the moment using animated brush strokes full of vibrant color")
 Painting.create!(title: "Starry Night (Vincent Van Gogh)", price: 150_000, poster_url: "https://cdn.britannica.com/78/43678-050-F4DC8D93/Starry-Night-canvas-Vincent-van-Gogh-New-1889.jpg", user: misa,
                   description: "The Starry Night, a moderately abstract landscape painting (1889) of an expressive night sky over a small hillside village, one of Dutch artist Vincent van Gogh’s most celebrated works.")
-Painting.create!(title: "The Great Wave off Kanagawa (Hokusai)", price: 180_000, poster_url: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Tsunami_by_hokusai_19th_century.jpg", user: lisa,
+Painting.create!(title: "The Great Wave off Kanagawa (Hokusai)", price: 180_000, poster_url: "https://upload.wikimedia.org/wikipedia/commons/a/a5/Tsunami_by_hokusai_19th_century.jpg", user: alan,
                   description: "The Great Wave off Kanagawa has two inscriptions. The title of the series is written in the upper-left corner within a rectangular frame, which read 冨嶽三十六景/神奈川沖/浪裏 Fugaku Sanjūrokkei / Kanagawa oki / nami ura, meaning Thirty-six views of Mount Fuji / On the high seas in Kanagawa / Under the wave")
 Painting.create!(title: "The Wounded Table (Frida Khalo)", price: 160_000, poster_url: "https://static.timesofisrael.com/www/uploads/2017/12/frida.jpg", user: misa,
                   description: "In this painting, the table has human legs and its surface is bleeding on the few knots. This table is a symbol of Frida's sense of broken family from the divorce. There are several objects around the table. In the center was Frida herself, surrounded by all the objects who accompanies her.")
@@ -40,11 +40,11 @@ Painting.create!(title: "The Artist's Garden at Giverny (Monet)", price: 190_000
                   description: "The Artist's Garden at Giverny is an oil on canvas painting by Claude Monet done in 1900, now in the Musée d'Orsay, Paris. It is one of many works by the artist of his garden at Giverny over the last thirty years of his life.")
 p "#{Painting.count} Painting are created"
 
-Request.create!(status: "pending", start_date: Date.new(2023, 8, 22), end_date: Date.new(2023, 8, 25),painting: Painting.all.sample, user: alan)
-Request.create!(status: "rejected", start_date: Date.new(2023, 8, 26), end_date: Date.new(2023, 8, 27),painting: Painting.all.sample, user: lisa)
-Request.create!(status: "accepted", start_date: Date.new(2023, 8, 29), end_date: Date.new(2023, 8, 31),painting: Painting.all.sample, user: alan )
-Request.create!(status: "accepted", start_date: Date.new(2023, 8, 30), end_date: Date.new(2023, 9, 1),painting: Painting.all.sample, user: mana )
-Request.create!(status: "accepted", start_date: Date.new(2023, 8, 31), end_date: Date.new(2023, 9, 2),painting: Painting.all.sample, user: misa )
+Request.create!(status: "pending", start_date: Date.new(2023, 8, 22), end_date: Date.new(2023, 8, 25),painting: Painting.all.sample, user: misa)
+Request.create!(status: "pending", start_date: Date.new(2023, 8, 26), end_date: Date.new(2023, 8, 27),painting: Painting.all.sample, user: lisa)
+Request.create!(status: "pending", start_date: Date.new(2023, 8, 29), end_date: Date.new(2023, 8, 31),painting: Painting.all.sample, user: misa )
+Request.create!(status: "pending", start_date: Date.new(2023, 8, 30), end_date: Date.new(2023, 9, 1),painting: Painting.all.sample, user: mana )
+Request.create!(status: "pending", start_date: Date.new(2023, 8, 31), end_date: Date.new(2023, 9, 2),painting: Painting.where(title: "The Great Wave off Kanagawa (Hokusai)"), user: lisa )
 
 # Mona Lisa
 # the japanase wave next to fujis
