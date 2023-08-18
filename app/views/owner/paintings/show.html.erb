@@ -11,7 +11,7 @@
           <p><%= @painting.description %></p>
         </div>
       </div>
-      <div class="p-4 bg-white"><!--form -->
+      <div class="p-4 bg-white mb-3"><!--form -->
         <p><%= number_to_currency(@painting.price, {unit: "¥", precision: 0 }) %>/ day</p>
         <p>🌟4.5  <i class="fa-regular fa-comment"></i> 10</p>
         <%= simple_form_for([@painting, @request]) do |f| %>
@@ -20,15 +20,12 @@
           <%=  f.label :end_date, class: 'control-label'%>
           <%=  f.date_field :end_date, class:'form-control  bg-white mb-3'%>
           <div class="d-grid mx-auto">
-            <%= f.submit "Add my painting", class: "btn btn-primary mb-3 text-white" %>
+            <%= f.submit "Update my painting", class: "btn btn-primary mb-3 text-white" %>
           </div>
         <% end %>
-        <div class="d-grid mx-auto">
-          <%= link_to "Back to home", root_path, class: "btn btn-outline-primary" %>
+        <div class="d-grid mx-auto" id="overwrite">
+          <%= link_to "Back to my items", owner_paintings_path, class: "btn btn-outline-primary" %>
         </div>
-      </div>
-      <div>
-        <%= link_to '←Back to my items', owner_paintings_path, class:"text-decoration-none" %>
       </div>
     </div>
   </div>

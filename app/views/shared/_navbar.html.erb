@@ -4,7 +4,7 @@
       <%= image_tag "CultureCanvas_2.png" %>
     <% end %>
     <%# <%= image_tag "CanvasCultureColor-1.png", class: "navbar-name" %>
-    <div class="input-group justify-content-center">
+    <div class="input-group justify-content-center" id="overwrite">
       <div class="form-outline">
         <%= form_with url: paintings_path, method: :get, class: "d-flex" do %>
           <%= text_field_tag :q,
