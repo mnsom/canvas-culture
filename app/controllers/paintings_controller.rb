@@ -22,7 +22,7 @@ class PaintingsController < ApplicationController
     @painting = Painting.new(painting_params)
     @painting.user = current_user
       if @painting.save
-        redirect_to paintings_path(@painting)
+        redirect_to painting_path(@painting)
       else
         # give the form back again -> new.html.erb
         render :new, status: :unprocessable_entity

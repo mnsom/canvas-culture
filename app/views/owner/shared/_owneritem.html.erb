@@ -1,0 +1,13 @@
+<div class="gallery col-6">
+  <% if @painting.photos.attached? %>
+    <% @painting.photos.each_with_index do |photo, index| %>
+      <%= cl_image_tag photo.key, class: "photo-#{index+1}" ,width: 1000, crop: :fill%>
+    <% end %>
+  <% else %>
+    <img class="photo-1" src="https://impressionistarts.com/assets/impression-sunrise-basement-musee-marmottan-monet.jpg">
+    <img class="photo-2" src="https://impressionistarts.com/assets/impression-sunrise-basement-musee-marmottan-monet.jpg">
+    <img class="photo-3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE5OatZPu9HHXYx754gZz5Bswr4KiQPf4mA8DhU1benaWdtHZhGmyhCLcKp7cBN464PTs&usqp=CAU">
+    <img class="photo-4" src="https://artincontext.org/wp-content/uploads/2022/01/Monet-Sunrise-Painting-Detail.jpg">
+    <img class="photo-5" src="https://www.vangoghstudio.com//Files/6/102000/102147/ProductPhotos/620/1872232221.jpg">
+  <% end %>
+</div>
