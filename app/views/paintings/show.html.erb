@@ -32,7 +32,7 @@
               <span class='fw-light' data-total-price-target='price' data-price="<%= @painting.price %>"><%= number_to_currency(@painting.price, {unit: "¥", precision: 0 }) %> / day</span>
             </p>
             <div class="d-grid mx-auto">
-              <%= f.submit "Create request", class: "btn btn-primary mb-3 text-white" %>
+              <%= f.submit "Book this painting", class: "btn btn-primary mb-3 text-white" %>
             </div>
           <% end %>
           <div class="d-grid mx-auto">
