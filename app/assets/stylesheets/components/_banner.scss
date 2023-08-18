@@ -1,12 +1,11 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 100px 0;
+  padding: 160px 0;
   animation: image_anime 10s ease infinite; /* 5秒のアニメーションを繰り返す */
   animation-iteration-count:infinite;
-  height:4gco00px;
+  height:400px;
 }
-
 .banner h1 {
   margin: 0;
   color: white;
@@ -18,7 +17,6 @@
 .banner p {
   font-size: 20px;
   color: white;
-  opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
@@ -28,13 +26,13 @@
     background-image: url(https://cdn-images-1.medium.com/max/1600/1*eEI_SZR7p0oCCBY2i1DSfw.jpeg); /* 背景画像1を指定 */
   }
   25% {
-    background-image: url(https://images.unsplash.com/photo-1554907984-15263bfd63bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80); /* 背景画像2を指定 */
+    background-image:url(https://images.unsplash.com/photo-1554907984-15263bfd63bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80); /* 背景画像2を指定 */
   }
   70% {
-    background-image: url(https://images.unsplash.com/photo-1603750003385-3342231a1ff1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80); /* 背景画像1を指定 */
+    background-image:url(https://images.unsplash.com/photo-1603750003385-3342231a1ff1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80); /* 背景画像1を指定 */
   }
   100% {
-    background-image: url(https://cdn-images-1.medium.com/max/1600/1*eEI_SZR7p0oCCBY2i1DSfw.jpeg); /* 背景画像1を指定 */
+    background-image:url(https://cdn-images-1.medium.com/max/1600/1*eEI_SZR7p0oCCBY2i1DSfw.jpeg); /* 背景画像1を指定 */
   }
 
 }
