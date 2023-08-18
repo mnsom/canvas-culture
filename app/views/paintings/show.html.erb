@@ -4,9 +4,17 @@
     <%= render 'shared/requestform' %>
     <div class="container col-4"><!--description & form -->
       <div class="ps-0 pe-4 mb-4"><!--description -->
-        <div class="owner-info justify-content-end border-bottom border-secondary mb-3 d-flex align-item-center gap-3">
-          <div class="name mr-3">Owner: Ramon Tanuki</div>
-          <p class="mb-0"><i class="fa-solid fa-user h3"></i></p>
+        <div class="owner-info justify-content-end border-bottom border-secondary mb-3 d-flex align-item-center gap-3 pb-2">
+          <div class="name mr-3 mb-0 d-flex align-items-center">Owner: <%= @painting.user.name %></div>
+          <div>
+            <% if @painting.user.photo.attached? %>
+              <img src="<%= cl_image_path(@painting.user.photo.key)%>" class="card-trip-user avatar-bordered" >
+            <% elsif @painting.user.avatar %>
+              <img src=<%= @painting.user.avatar %> class="card-trip-user avatar-bordered" />
+            <% else %>
+              <img src="https://media.istockphoto.com/id/1300845620/vector/user-icon-flat-isolated-on-white-background-user-symbol-vector-illustration.jpg?s=612x612&w=0&k=20&c=yBeyba0hUkh14_jgv1OKqIH0CCSWU_4ckRkAoy2p73o=" class="card-trip-user avatar-bordered" />
+            <% end %>
+          </div>
         </div>
         <div class="description text-center">
           <p><%= @painting.description %></p>
