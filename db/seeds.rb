@@ -41,10 +41,10 @@ Painting.create!(title: "The Artist's Garden at Giverny (Monet)", price: 190_000
 p "#{Painting.count} Painting are created"
 
 Request.create!(status: "pending", start_date: Date.new(2023, 8, 22), end_date: Date.new(2023, 8, 25),painting: Painting.all.sample, user: misa)
-Request.create!(status: "rejected", start_date: Date.new(2023, 8, 26), end_date: Date.new(2023, 8, 27),painting: Painting.all.sample, user: lisa)
-Request.create!(status: "accepted", start_date: Date.new(2023, 8, 29), end_date: Date.new(2023, 8, 31),painting: Painting.all.sample, user: misa )
-Request.create!(status: "accepted", start_date: Date.new(2023, 8, 30), end_date: Date.new(2023, 9, 1),painting: Painting.all.sample, user: mana )
-Request.create!(status: "pending", start_date: Date.new(2023, 8, 31), end_date: Date.new(2023, 9, 2),painting: Painting.where(title: "The Great Wave off Kanagawa (Hokusai)"), user: alan )
+Request.create!(status: "pending", start_date: Date.new(2023, 8, 26), end_date: Date.new(2023, 8, 27),painting: Painting.all.sample, user: lisa)
+Request.create!(status: "pending", start_date: Date.new(2023, 8, 29), end_date: Date.new(2023, 8, 31),painting: Painting.all.sample, user: misa )
+Request.create!(status: "pending", start_date: Date.new(2023, 8, 30), end_date: Date.new(2023, 9, 1),painting: Painting.all.sample, user: mana )
+Request.create!(status: "pending", start_date: Date.new(2023, 8, 31), end_date: Date.new(2023, 9, 2),painting: Painting.where(title: "The Great Wave off Kanagawa (Hokusai)"), user: lisa )
 
 # Mona Lisa
 # the japanase wave next to fujis
