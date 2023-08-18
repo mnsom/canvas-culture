@@ -16,7 +16,12 @@
           <%= f.submit 'Reject', class: 'btn btn-light' %>
         <% end %>
       <% else %>
-        <p><%= request.status %></p>
+        <% case request.status %>
+          <% when 'accepted' %>
+            <p><span style='color: green;'>Accepted </span></p>
+            <% when 'rejected' %>
+            <p><span style='color: red;'>Rejected</span></p>
+          <% end %>
       <% end %>
     </div>
     <p><strong>Requested by <%= request.user.name %></strong></p>

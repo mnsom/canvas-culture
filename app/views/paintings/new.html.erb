@@ -4,6 +4,7 @@
   <%= simple_form_for(@painting) do |f| %>
     <%= f.input :title, input_html:{class:'form-control bg-white'}%>
     <%= f.input :price, input_html:{class:'form-control bg-white'}%>
+    <%= f.input :description, input_html:{class:'form-control bg-white', rows: 3}%>
     <%= f.input :photos, as: :file, input_html:{ class:'form-control bg-white mb-4',multiple: true }, class:'bg-white'%>
     <div class="d-grid">
       <%= f.submit "Submit", class: "btn btn-primary text-white" %>

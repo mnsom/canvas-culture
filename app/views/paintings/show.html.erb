@@ -1,8 +1,8 @@
 <div class="container px-0 py-4 mb-4 d-flex"> <!--painting pictures -->
   <div class="row">
-    <h2 class="mb-3"><%= @painting.title %></h2>
+    <h2 class="mb-3 ms-3"><%= @painting.title %></h2>
     <%= render 'shared/requestform' %>
-    <div class="container col-4"><!--description & form -->
+    <div class="container col-5 me-4"><!--description & form -->
       <div class="ps-0 pe-4 mb-4"><!--description -->
         <div class="owner-info justify-content-end border-bottom border-secondary mb-3 d-flex align-item-center gap-3 pb-2">
           <div class="name mr-3 mb-0 d-flex align-items-center">Owner: <%= @painting.user.name %></div>
