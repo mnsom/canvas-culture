@@ -1,8 +1,7 @@
 # Canvas Culture
 
-Project description goes here
+A website which allows users to search, request and rent famous paintings from all around the world.
 
-_DROP SCREENSHOT HERE_
 <img width="1108" alt="スクリーンショット 2023-09-07 12 13 38" src="https://github.com/mnsom/canvas-culture/assets/137872025/7c34ef11-4259-4b8d-9195-78376cf28bfa">
 <img width="1108" alt="スクリーンショット 2023-09-07 12 14 12" src="https://github.com/mnsom/canvas-culture/assets/137872025/ec994983-89cb-4842-bdc5-9a1b2f901950">
 <img width="1067" alt="スクリーンショット 2023-09-07 12 15 32" src="https://github.com/mnsom/canvas-culture/assets/137872025/bae2c9ca-fa64-4daf-a0f7-80bb4a9adec1">
